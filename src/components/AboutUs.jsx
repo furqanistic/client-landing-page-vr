@@ -1,0 +1,78 @@
+import React from 'react'
+import { styled } from 'styled-components'
+import VRimage from '/vr2.png'
+import { AboutData } from '../content.js'
+const About = styled.div`
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex: 2;
+  background-color: white;
+  padding: 8rem 3rem;
+`
+const Left = styled.div`
+  flex: 1;
+  width: 100%;
+  position: relative;
+`
+const LeftImage = styled.img`
+  width: 100%;
+  background-position: cover;
+  background-repeat: no-repeat;
+  object-fit: cover;
+`
+const LeftText = styled.p`
+  font-size: 8rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #ffffff;
+`
+const Right = styled.div`
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  position: relative;
+`
+const RightBox = styled.span`
+  font-size: 1.4rem;
+  color: #2e2e2e;
+  padding: 0 1.5rem;
+  padding-right: 2rem;
+`
+const RightBoxHead = styled.span`
+  font-size: 2.2rem;
+  color: #171717;
+  padding: 0.5rem 1.5rem;
+  font-weight: 600;
+`
+const RightText = styled.p`
+  font-size: 8rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #000000;
+`
+const AboutUs = () => {
+  return (
+    <About>
+      <Left>
+        <LeftImage src={VRimage} />
+        <LeftText>AB</LeftText>
+      </Left>
+      <Right>
+        <RightBoxHead>{AboutData.title}</RightBoxHead>
+        <RightBox>{AboutData.description}</RightBox>
+        <RightText>OUT US</RightText>
+      </Right>
+    </About>
+  )
+}
+
+export default AboutUs

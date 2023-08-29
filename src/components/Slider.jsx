@@ -6,7 +6,7 @@ import MobileIcon from '/mobileicon.png'
 import ThreeIcon from '/360icon.png'
 
 const Slide = styled.div`
-  height: calc(80vh - 60px);
+  height: calc(85vh - 60px);
   width: 100%;
   position: relative;
 `
