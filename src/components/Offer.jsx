@@ -27,6 +27,7 @@ const Services = styled.div`
 `
 const ServicesItem = styled.div`
   flex: 1;
+  display: flex;
   width: 100%;
   height: 100%;
   min-height: 500px;
@@ -43,7 +44,7 @@ const ServicesItem = styled.div`
 `
 const Service = styled.div`
   width: 100%;
-  height: 80%;
+  height: 100%;
   padding: 2rem;
 `
 const ServiceImage = styled.img`
@@ -58,8 +59,16 @@ const ServiceImage = styled.img`
   box-shadow: 0px 0px 15px -2px rgba(0, 0, 0, 0.75);
 `
 const ServiceName = styled.span`
-  font-size: 1rem;
+  font-size: 1.5rem;
+
   color: red;
+  font-weight: 600;
+`
+const ServiceNameOther = styled.span`
+  font-size: 1.5rem;
+
+  color: #000000;
+  font-weight: 600;
 `
 const Offer = () => {
   return (
@@ -70,7 +79,13 @@ const Offer = () => {
           <>
             <ServicesItem key={item.id}>
               <ServiceImage src={item.img} />
-              <Service>{item.Text}</Service>
+              <Service>
+                {item.Text}
+                <br></br>
+                <br></br>
+                <ServiceName>{item.Cat}</ServiceName>
+                <ServiceNameOther> {item.CatTwo}</ServiceNameOther>
+              </Service>
             </ServicesItem>
           </>
         ))}
