@@ -6,6 +6,7 @@ import Offer from '../components/Offer'
 import Footer from '../components/Footer'
 import { styled } from 'styled-components'
 import SocialBar from '../components/SocialBar'
+import Portfolio from '../components/Portfolio'
 
 const Container = styled.div`
   position: relative;
@@ -28,6 +29,7 @@ const Home = () => {
       <Slider />
       <AboutUs />
       <Offer />
+      <Portfolio />
       <Footer />
     </Container>
   )

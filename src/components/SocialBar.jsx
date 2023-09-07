@@ -14,6 +14,12 @@ const Social = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-around;
+  display: none;
+  visibility: hidden;
+  @media only screen and (max-width: 480px) {
+    display: flex;
+    visibility: visible;
+  }
 `
 
 const SocialBar = () => {

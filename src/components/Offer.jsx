@@ -10,6 +10,9 @@ const About = styled.div`
   padding: 6rem 3rem;
 
   text-align: center;
+  @media only screen and (max-width: 480px) {
+    padding: 6rem 1rem;
+  }
 `
 const Title = styled.p`
   font-size: 3rem;
@@ -41,11 +44,30 @@ const ServicesItem = styled.div`
   -webkit-box-shadow: 0px 0px 15px -2px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px 0px 15px -2px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 0px 15px -2px rgba(0, 0, 0, 0.75);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  &:hover {
+    background-color: #ff000081;
+  }
+  @media only screen and (max-width: 480px) {
+    margin-right: 1rem;
+    width: 50%;
+    max-height: 400px;
+    min-height: 400px;
+    margin-bottom: 10rem;
+    align-items: flex-start;
+  }
 `
 const Service = styled.div`
   width: 100%;
   height: 100%;
   padding: 2rem;
+  margin-top: 6rem;
+  font-size: 0.8rem;
+  @media only screen and (max-width: 480px) {
+    padding: 1rem;
+    font-size: 0.6rem;
+  }
 `
 const ServiceImage = styled.img`
   width: 170px;
@@ -57,10 +79,14 @@ const ServiceImage = styled.img`
   -webkit-box-shadow: 0px 0px 15px -2px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px 0px 15px -2px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 0px 15px -2px rgba(0, 0, 0, 0.75);
+  @media only screen and (max-width: 480px) {
+    width: 130px;
+    height: 170px;
+    top: -20%;
+  }
 `
 const ServiceName = styled.span`
   font-size: 1.5rem;
-
   color: red;
   font-weight: 600;
 `

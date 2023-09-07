@@ -10,7 +10,6 @@ import PlayIcon from '/play.svg'
 
 const Slide = styled.div`
   height: calc(85vh - 60px);
-  background-color: red;
   width: 100%;
   position: relative;
 `
@@ -31,6 +30,22 @@ const SlideBoxes = styled.div`
   border-radius: 50px;
   padding: 0.8rem 1.5rem;
   line-height: 80px;
+  @media only screen and (max-width: 480px) {
+    padding: 0.2rem 1.2rem;
+    line-height: 70px;
+  }
+`
+const SlideBoxesTwo = styled(SlideBoxes)`
+  margin-top: 8rem;
+  @media only screen and (max-width: 480px) {
+    margin-top: 6rem;
+  }
+`
+const SlideBoxesThree = styled(SlideBoxes)`
+  margin-top: 16rem;
+  @media only screen and (max-width: 480px) {
+    margin-top: 12rem;
+  }
 `
 const SlideText = styled.span`
   font-size: 3rem;
@@ -38,12 +53,21 @@ const SlideText = styled.span`
   height: 100%;
   width: 100%;
   color: #e30a0a;
+  @media only screen and (max-width: 480px) {
+    font-size: 2.1rem;
+  }
 `
 const SlideTextTwo = styled(SlideText)`
   font-size: 2rem;
+  @media only screen and (max-width: 480px) {
+    font-size: 1.3rem;
+  }
 `
 const SlideTextThree = styled(SlideText)`
   font-size: 1.6rem;
+  @media only screen and (max-width: 480px) {
+    font-size: 1.3rem;
+  }
 `
 const SlideTextOther = styled.span`
   font-size: 3rem;
@@ -52,16 +76,28 @@ const SlideTextOther = styled.span`
   width: 100%;
   color: #000000;
   margin-left: 10px;
+  @media only screen and (max-width: 480px) {
+    font-size: 1.8rem;
+  }
 `
 const SlideTextOtherTwo = styled(SlideTextOther)`
   font-size: 2rem;
+  @media only screen and (max-width: 480px) {
+    font-size: 1.3rem;
+  }
 `
 const SlideTextOtherThree = styled(SlideTextOther)`
   font-size: 1.6rem;
+  @media only screen and (max-width: 480px) {
+    font-size: 1.3rem;
+  }
 `
 const SlideIcon = styled.img`
   width: 70px;
   margin-left: 10px;
+  @media only screen and (max-width: 480px) {
+    width: 50px;
+  }
 `
 const DownloadOptions = styled.div`
   display: flex;
@@ -91,13 +127,14 @@ const InfoDown = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  margin-left: 1.2rem;
 `
 const InfoTop = styled.p`
-  font-size: 1rem;
+  font-size: 0.8rem;
   font-weight: 600;
 `
 const InfoBottom = styled.p`
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 700;
 `
 const IconImg = styled.img`
@@ -131,17 +168,17 @@ const Slider = () => {
         <SlideTextOther>Reality</SlideTextOther>
         <SlideIcon src={VRIcon} />
       </SlideBoxes>
-      <SlideBoxes style={{ marginTop: '8rem' }}>
+      <SlideBoxesTwo>
         <SlideTextTwo>Augmented </SlideTextTwo>
         <SlideTextOtherTwo>Reality</SlideTextOtherTwo>
         <SlideIcon src={MobileIcon} style={{ width: '50px' }} />
-      </SlideBoxes>
-      <SlideBoxes style={{ marginTop: '16rem' }}>
+      </SlideBoxesTwo>
+      <SlideBoxesThree>
         <SlideTextThree>360 </SlideTextThree>
         <SlideTextOtherThree>Virtual </SlideTextOtherThree>
         <SlideTextThree style={{ marginLeft: '10px' }}>Tours</SlideTextThree>
         <SlideIcon src={ThreeIcon} />
-      </SlideBoxes>
+      </SlideBoxesThree>
     </Slide>
   )
 }
